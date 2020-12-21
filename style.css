@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+i,
+svg{
+    pointer-events: none;
+}
+.kick-pad,.snare-pad,.hihat-pad{
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+.kick-pad{
+background:  rgba(212, 253, 78, 0.52);
+}
+.kick-pad.active{
+    background:rgba(86, 105, 21, 0.52);
+}
+   
+.snare-pad{
+    background:rgba(167, 75, 139, 0.918);
+}
+.snare-pad.active{
+    background:rgba(94, 4, 67, 0.918);
+}
+.hihat-pad{
+    background:rgba(12, 78, 87, 0.52);
+}
+.hihat-pad.active{
+    background:rgba(34, 127, 139, 0.52);
+}
+.sequencer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+.hihat-track,.snare-track,.kick-track{
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+    justify-content: space-between;
+    width: 70%;
+}
+.kick,.snare,.hihat{
+    display: flex;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.controls button{
+    padding: 1rem;
+    border: none;
+    background: rgb(134, 111, 111);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.pad{
+    transition: all 0.5s ease;
+}
+.play{
+    padding: 1rem 2rem;
+    background: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 3rem;
+}
+#snare-select,#kick-select,#hihat-select{
+    height: 3rem;
+}
+.mute.active{
+background-color: grey;
+}
+
+.tempo{
+    margin: 3rem;
+    width: 30%;
+}
+.tempo-slide{
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: aquamarine;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.tempo p{
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+@keyframes playTrack{
+from{
+    transform: scale(1);
+}
+to{
+    transform: scale(1.2);
+}
+}
